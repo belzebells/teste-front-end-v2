@@ -1,22 +1,51 @@
-# Desafio Front-end - Econverse
+# Desafio Front-end – Econverse
 
-Este projeto foi o resultado do teste técnico para a vaga de desenvolvedor front-end na Econverse. A proposta era criar uma landing page de e-commerce completa seguindo um layout do Figma, integrando com uma API de produtos e garantindo o funcionamento de componentes como carrosséis e modais.
+Este projeto foi desenvolvido como parte do teste técnico para a vaga de desenvolvedora front-end na Econverse.
 
-## O Desafio
-O maior foco aqui foi a fidelidade ao design e a organização do código. Diferente de soluções automatizadas ou geradores de código, este projeto foi construído "bit a bit", focando em entender como cada elemento se comporta no layout e garantindo que o CSS não quebrasse em diferentes resoluções.
+A proposta consistia na criação de uma landing page de e-commerce completa, seguindo um layout fornecido no Figma, integrando com uma API de produtos e garantindo o funcionamento de componentes como carrosséis e modais.
 
-## O que foi utilizado
-* React com TypeScript para garantir que o código seja escalável e fácil de debugar.
-* Sass (SCSS) estruturado para manter os estilos organizados e evitar repetições desnecessárias.
-* Swiper.js para a vitrine de produtos, configurado para ser responsivo.
-* Fetch API para buscar os dados dos produtos e renderizar dinamicamente na tela.
+---
 
-## Como eu estruturei
-Optei por trabalhar com componentes bem divididos (Header, Banner, Vitrine, etc.) para que o código ficasse legível. Usei o pré-processador Sass para ter mais controle sobre as variáveis de cores e espaçamentos definidos no Figma, o que facilitou muito na hora de deixar o visual idêntico à referência.
+## O desafio
 
-## Instruções para rodar
-Se quiser testar o projeto localmente:
-1. Clone o repositório.
-2. Certifique-se de estar na pasta raiz do projeto (onde está o package.json).
-3. Rode `npm install` para baixar as dependências.
-4. Rode `npm run dev` para subir o servidor local.
+O principal foco foi a fidelidade visual ao design e a organização do código.
+
+Diferente de soluções automatizadas ou geradores de código, o projeto foi construído de forma incremental, cuidando do comportamento de cada elemento no layout e garantindo que o CSS se mantivesse consistente em diferentes resoluções.
+
+---
+
+## 🛠 Tecnologias utilizadas
+
+- React com TypeScript
+- Vite
+- Sass (SCSS)
+- Swiper.js
+- Fetch API
+
+---
+
+## 🧱 Organização do projeto
+
+A página foi estruturada em seções bem definidas (Header, Banner, Vitrine, Parcerias, Footer, etc.), centralizadas no componente principal da aplicação, priorizando legibilidade, clareza e agilidade na entrega.
+
+O uso do Sass facilitou o controle das cores e espaçamentos definidos no Figma, ajudando a manter o visual o mais fiel possível à referência.
+
+---
+
+## ▶️ Como rodar o projeto
+
+1. Clone o repositório
+2. Acesse a pasta raiz do projeto
+3. Instale as dependências:
+   npm install
+4. Inicie o servidor de desenvolvimento:
+   npm run dev
+
+O projeto estará disponível em:
+http://localhost:5173
+
+---
+
+## 👩‍💻 Autora
+
+Bells Bonzanini
