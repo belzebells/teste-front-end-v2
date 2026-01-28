@@ -1,73 +1,22 @@
-# React + TypeScript + Vite
+# Desafio Front-end - Econverse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi o resultado do teste técnico para a vaga de desenvolvedor front-end na Econverse. A proposta era criar uma landing page de e-commerce completa seguindo um layout do Figma, integrando com uma API de produtos e garantindo o funcionamento de componentes como carrosséis e modais.
 
-Currently, two official plugins are available:
+## O Desafio
+O maior foco aqui foi a fidelidade ao design e a organização do código. Diferente de soluções automatizadas ou geradores de código, este projeto foi construído "bit a bit", focando em entender como cada elemento se comporta no layout e garantindo que o CSS não quebrasse em diferentes resoluções.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## O que foi utilizado
+* React com TypeScript para garantir que o código seja escalável e fácil de debugar.
+* Sass (SCSS) estruturado para manter os estilos organizados e evitar repetições desnecessárias.
+* Swiper.js para a vitrine de produtos, configurado para ser responsivo.
+* Fetch API para buscar os dados dos produtos e renderizar dinamicamente na tela.
 
-## React Compiler
+## Como eu estruturei
+Optei por trabalhar com componentes bem divididos (Header, Banner, Vitrine, etc.) para que o código ficasse legível. Usei o pré-processador Sass para ter mais controle sobre as variáveis de cores e espaçamentos definidos no Figma, o que facilitou muito na hora de deixar o visual idêntico à referência.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Instruções para rodar
+Se quiser testar o projeto localmente:
+1. Clone o repositório.
+2. Certifique-se de estar na pasta raiz do projeto (onde está o package.json).
+3. Rode `npm install` para baixar as dependências.
+4. Rode `npm run dev` para subir o servidor local.
