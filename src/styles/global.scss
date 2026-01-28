@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+$blue: #3442B5;
+$pink: #F71963;
+$yellow: #FFC011;
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Poppins", sans-serif; color: #3F3F40; background: #fff; }
+
+.header {
+  &__top { background: #F6F6F6; padding: 8px 10%; display: flex; justify-content: space-between; font-size: 12px; color: #9F9F9F; }
+  &__main { padding: 20px 10%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #F0F0F0; }
+  &__search { background: #F6F6F6; border-radius: 10px; width: 45%; padding: 12px 20px; display: flex; input { border: none; background: transparent; width: 100%; outline: none; } }
+  &__nav { display: flex; justify-content: center; gap: 35px; padding: 15px 0; font-size: 12px; font-weight: 600; text-transform: uppercase; color: #9F9F9F; .active { color: $pink; } }
+}
+
+.banner {
+  width: 100%; height: 395px; background-size: cover; background-position: center; display: flex; align-items: center; padding: 0 10%; color: #fff;
+  h1 { font-size: 48px; font-weight: 700; line-height: 1.1; }
+  .highlight { color: $yellow; font-size: 36px; font-weight: 700; display: block; margin-top: 5px; }
+  button { margin-top: 25px; padding: 15px 50px; background: $yellow; border: none; border-radius: 5px; font-weight: 700; cursor: pointer; }
+}
+
+// SEÇÃO DE CATEGORIAS - ÍCONES AUMENTADOS
+.categories {
+  display: flex; justify-content: center; gap: 25px; padding: 60px 10%;
+  &__item { 
+    text-align: center; cursor: pointer;
+    div { 
+      // Aumentei o quadrado branco para 140px
+      width: 140px; height: 140px; background: #fff; border-radius: 10px; 
+      display: flex; align-items: center; justify-content: center; margin-bottom: 10px; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+      transition: transform 0.2s;
+      
+      img { 
+        // Aumentei a imagem do ícone para 100px
+        width: 100px; height: 100px; object-fit: contain; 
+      }
+    }
+    &:hover div { transform: scale(1.05); } // Efeitozinho de hover
+    p { font-size: 16px; color: #4E4E4E; font-weight: 500; }
+    &.active { p { color: $blue; font-weight: 700; } } // Azul no texto ativo igual ao Figma
+  }
+}
+
+.vitrine {
+  max-width: 1240px; margin: 0 auto 60px; padding: 0 20px;
+  &__title { font-size: 30px; font-weight: 700; color: $blue; margin-bottom: 40px; display: flex; align-items: center; gap: 20px; &::before, &::after { content: ""; height: 1px; background: #dedede; flex: 1; } }
+}
+
+.product-card {
+  border: 1px solid #eee; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; background: #fff; height: 100%;
+  &__image { height: 200px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; img { max-width: 100%; max-height: 100%; } }
+  &__price { font-size: 20px; font-weight: 700; color: $blue; margin: 15px 0; }
+  &__cta { width: 100%; padding: 12px; background: $blue; color: #fff; border: none; border-radius: 4px; font-weight: 700; cursor: pointer; text-transform: uppercase; }
+}
+
+.partners {
+  max-width: 1240px; margin: 0 auto 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 25px; padding: 0 20px;
+  &__box { 
+    height: 350px; border-radius: 20px; background-size: cover; background-position: center; padding: 40px; display: flex; flex-direction: column; justify-content: flex-end; color: #fff; 
+    h2 { font-size: 40px; font-weight: 700; }
+    button { width: 130px; margin-top: 15px; padding: 12px; border: none; border-radius: 10px; background: $blue; color: #fff; font-weight: 700; cursor: pointer; }
+  }
+}
+
+.footer {
+  background: #2A2A2A; color: #fff; padding: 60px 10% 20px;
+  &__content { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; 
+    h4 { margin-bottom: 20px; text-transform: uppercase; font-size: 16px; }
+    p { font-size: 12px; opacity: 0.7; margin-bottom: 10px; }
+  }
+}
+
+.modal {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center; z-index: 1000;
+  &__content { background: #fff; padding: 40px; border-radius: 4px; max-width: 700px; width: 90%; position: relative; display: flex; gap: 30px; }
+  &__close { position: absolute; top: 15px; right: 15px; border: none; background: none; font-size: 20px; cursor: pointer; }
+  &__image { width: 250px; img { width: 100%; } }
+  &__info { flex: 1; h2 { color: $blue; font-size: 22px; } .price { font-size: 24px; font-weight: 700; color: $blue; margin: 15px 0; } }
+}
